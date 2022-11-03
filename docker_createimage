@@ -1,0 +1,9 @@
+FROM ubuntu:latest
+MAINTAINER
+"BHOOMI"
+RUN apt update -y
+RUN apt install nginx -
+yEXPOSE 80
+COPY index.html
+/var/www/html/index.htmlCMD ["nginx",
+"-g","daemon off;"]
